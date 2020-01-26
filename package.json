@@ -1,0 +1,24 @@
+{
+  "name": "express-school-rest-api",
+  "version": "1.0.0",
+  "description": "Expressjs rest api for school data model",
+  "main": "app",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dluga/express-school-rest-api.git"
+  },
+  "keywords": [
+    "expressjs",
+    "rest",
+    "api"
+  ],
+  "author": "Vitalii Dlugoborsky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dluga/express-school-rest-api/issues"
+  },
+  "homepage": "https://github.com/dluga/express-school-rest-api#readme"
+}
