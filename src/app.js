@@ -1,4 +1,6 @@
 // var createError = require('http-errors');
+const path = require('path');
+require('dotenv').config({ path: path.resolve(__dirname, './config/.env') });
 const express = require('express');
 const bodyParser = require('body-parser');
 
@@ -9,8 +11,8 @@ app.use(bodyParser.json());
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.listen(3000, () => {
-  console.log('Example app listening on port 3000!');
+app.listen(process.env.SERVER_PORT, () => {
+  console.log(`App listening on port ${process.env.SERVER_PORT}`);
 });
 
 // catch 404 and forward to error handler
