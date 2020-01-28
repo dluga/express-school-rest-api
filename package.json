@@ -4,7 +4,14 @@
   "description": "Expressjs rest api for school data model",
   "main": "app",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./src/app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "winston": "^3.2.1"
   },
   "repository": {
     "type": "git",
@@ -20,5 +27,10 @@
   "bugs": {
     "url": "https://github.com/dluga/express-school-rest-api/issues"
   },
-  "homepage": "https://github.com/dluga/express-school-rest-api#readme"
+  "homepage": "https://github.com/dluga/express-school-rest-api#readme",
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
 }
