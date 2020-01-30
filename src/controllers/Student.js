@@ -27,7 +27,7 @@ module.exports.findById = (req, res) => {
 
 module.exports.update = (req, res) => {
   const data = req.body;
-  const params = [data.name, data.surname, data.group_id, Number(req.params.id)];
+  const params = [data.name, data.surname, data.groupId, Number(req.params.id)];
   Student.update(params, (err) => {
     if (err) {
       log.error(err.message);
@@ -65,7 +65,7 @@ module.exports.create = (req, res) => {
     log.error(errors);
     res.sendStatus(400).json({ errors: errors.join(',') });
   } */
-  const params = [data.name, data.surname, data.group_id];
+  const params = [data.name, data.surname, data.groupId];
   Student.create(params, (err, result) => {
     if (err) {
       log.error(err.message);
