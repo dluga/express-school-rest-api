@@ -7,6 +7,7 @@ module.exports.all = (req, res) => {
     if (err) {
       log.error(err.message);
       res.sendStatus(500);
+      return;
     }
     res.send(rows);
   });
@@ -18,6 +19,7 @@ module.exports.findById = (req, res) => {
     if (err) {
       log.error(err.message);
       res.sendStatus(400).json({ error: err.message });
+      return;
     }
     res.send(row);
   });
@@ -30,6 +32,7 @@ module.exports.update = (req, res) => {
     if (err) {
       log.error(err.message);
       res.sendStatus(400).json({ error: err.message });
+      return;
     }
     res.send(200);
   });
@@ -40,6 +43,7 @@ module.exports.delete = (req, res) => {
     if (err) {
       log.error(err.message);
       res.sendStatus(400).json({ error: err.message });
+      return;
     }
     res.sendStatus(200);
   });
@@ -66,6 +70,7 @@ module.exports.create = (req, res) => {
     if (err) {
       log.error(err.message);
       res.sendStatus(500);
+      return;
     }
     res.send(result);
   });
