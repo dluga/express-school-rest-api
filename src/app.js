@@ -5,6 +5,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const log = require('./helpers/logger')(module);
 const TeacherRouter = require('./routes/Teacher');
+const GroupRouter = require('./routes/Group');
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api', TeacherRouter);
+app.use('/api', GroupRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
